@@ -44,12 +44,7 @@ except URLError as e:
 
 #Import Snowflake Connector
 
-add_my_fruit = streamlit.text_input('What fruit would you like to add', )
-
-# add a button to load the fruit list
-if streamlit.button('Get Fruit Load List'):
-    my_data_rows = get_fruit_load_list()
-    streamlit.dataframe(my_data_rows)
+new_fruit = streamlit.text_input('What fruit would you like to add', )
     
 # allow user to add a fruit to the list
 def insert_row_snowflake(new_fruit):
